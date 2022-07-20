@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .device.hero {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 4;
+            width: 44vh;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 2vh 1.5vh 2.2vh;
+            border-radius: 3.4vw;
+            background-color: #f0f0f0;
+            box-shadow: -7px 12px 0 -3px #dbdbdb, inset 0 0 8px 7px #d6d6d6, -32px 62px 50px -20px rgb(0 0 0 / 25%);
+            -webkit-transform: perspective(1457px) rotateX(40deg) rotateY(10deg) rotateZ(-20deg) translate(10px, 0px);
+            transform: perspective(1457px) rotateX(40deg) rotateY(10deg) rotateZ(-20deg) translate(10px, 0px);
+            -webkit-transition: all 500ms cubic-bezier(.785, .135, .15, .86);
+            transition: all 500ms cubic-bezier(.785, .135, .15, .86);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            }
+
+    </style>
+  </head>
+
+  <body>
+    <div data-ix="main-device-interaction" class="device hero">
+      <div class="screen-wrapper hero">
+        <div class="screen-mask">
+          <div data-ix="pointer" class="pointer"></div>
+        </div><img src="imagens/home-iphone-x.png" width="750px" alt="">
+        <div class="notch"></div>
+      </div>
+    </div>
+  </body>
+
+</html>
