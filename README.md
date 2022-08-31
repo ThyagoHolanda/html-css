@@ -3,3 +3,5 @@
 
  Estou aprendendo a criar sites e vou gerenciar meus repositorios
  
+ <button>Exercícios</button>
+ <button>Desafios</button>
