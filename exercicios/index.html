@@ -11,8 +11,7 @@
     <header>
         <h1>Curso de HTML5 e CSS3 Curso em Video</h1>
     </header>
-    <article>
-        <section class="ex-list">
+    <article class="html-list">
                 <h1>Exercícios de HTML5</h1>
                 <!-- HTML5 Puro-->
                 <p onmouseenter="enterex('ex001')" onmouseleave="leaveex()"><a href="ex001/index.html" >Exercício 001:</a>Paragrafo e H1</p>
@@ -29,16 +28,14 @@
                 <p onmouseenter="enterex('ex010')" onmouseleave="leaveex()"><a href="ex010/index.html" >Exercício 010</a>: Link's</p>
                 <p onmouseenter="enterex('ex011')" onmouseleave="leaveex()"><a href="ex011/index.html" >Exercício 011</a>: Imagem dinamica e Áudio</p>
                 <p onmouseenter="enterex('ex012')" onmouseleave="leaveex()"><a href="ex012/index.html" >Exercício 012</a>: Videos Locais e Externos</p>
-        </section>
-        <section class="ex-img" id="htmlimg">
-                <picture>
-                </picture>
-        </section>
+
     </article>
-    <article>
-        <section class="ex-list">
+    <article class="html-img" id="htmlimg">
+        <img src="imagem/exemplo.png">
+    </article>
+    <!---->
+    <article class="html-list">
             <h1>Exercícios de HTML5 + CSS3</h1>
-            <!-- HTML + CSS-->
             <p><a href="ex013/index.html">Exercício 013</a>: CSS Inline</p>
             <p><a href="ex014/index.html">Exercício 014</a>: CSS Interno</p>
             <p><a href="ex015/index.html">Exercício 015</a>: CSS Externo</p>
@@ -57,17 +54,11 @@
             <p><a href="ex021/caixa02.html">Exercício 021B</a>: Tags de agrupamento</p>
             <p><a href="ex021/caixa03.html">Exercício 021C</a>: Bordas Personalizadas</p>
             <p><a href="ex022/fundo001.html">Exercício 022</a>: Imagens como fundo</p>
-        </section>
-        <section class="ex-img" id="css-img">
-            <!--
-                <picture>
-                <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
-                <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
-                <img src="imagens/foto-g.png" alt="Imagem flexível">
-                </picture>
-            -->
-        </section>
 </article>
+<article class="css-img" id="htmlimg">
+    <img src="imagem/exemplo.png">
+</article>
+
 <script src="script.js"></script>
 </body>
 </html>

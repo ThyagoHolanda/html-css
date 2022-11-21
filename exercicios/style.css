@@ -19,19 +19,40 @@ header {
 
 article {
     background-color: white;
-    width: 95%;
-    height: auto;
-    margin: 10px auto;
-    padding: 10px;
+    margin: 10px;
+    padding: 5px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.400);
 }
 
-article section h1 {
+article.html-list{
+    width: 35%;
+    min-height: 380px;
+    display: inline-block;
+}
+
+article.html-img{
+    width: 60%;
+    min-height: 380px;
+    float: left;
+}
+
+article.css-img{
+    width: 60%;
+    min-height: 451px;
+    float: left;
+}
+
+article img{
+    width: 100%;
+    height: 375px;
+}
+
+article h1 {
     margin-bottom: 10px;
 }
 
-article section p {
+article p {
     text-align: justify;
     margin: 0px 0px 5px 5px;
 }
@@ -41,22 +62,7 @@ article a {
     color: rgb(51, 51, 255);
 }
 
-article section a:hover {
+article a:hover {
     text-decoration: underline;
     text-shadow: 0px 0px 2px rgb(0, 0, 0);
-}
-
-article section.ex-list{
-    width: 30%;
-    display: inline-block;
-    margin-right: 15px;
-    border: solid red 1px;
-}
-
-article section.ex-img{
-    width: 50%;
-    height: 339px;
-    margin: auto;
-    background: rgba(0, 0, 0, 0);
-    display: inline-block;
 }
