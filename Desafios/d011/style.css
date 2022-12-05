@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
+
+p{
+    margin-top: 0px;
+}
+
+h1{
+    margin: 15px auto 10px auto;
+}
+/*FIm HEADER */
+
+/* MAIN */
+.image {
+    box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.411);
+}
