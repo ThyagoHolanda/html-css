@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -14,16 +24,81 @@ header {
     padding: 15px;
 }
 
-p{
-    margin-top: 0px;
-}
-
 h1{
+    font-family: var(--fonte2);
+    font-size: 10vw;
+    font-weight: bold;
+    font-variant: small-caps;
     margin: 15px auto 10px auto;
 }
+
+p{
+    margin-top: 0px;
+    font-family: var(--fonte1);
+}
+
 /*FIm HEADER */
 
 /* MAIN */
-.image {
-    box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.411);
+
+.normal, .image1, .image2{
+    padding: 50px 25px 50px 30px;
+    line-height: 100px;
+    font-size: 46px;
 }
+
+.image1 {
+    box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.411);
+    background-image: url(imagem/ladybug-1280_853.jpg);
+    background-attachment: fixed;
+    background-position: center;
+
+    background-size: cover;
+}
+
+.image2 {
+    box-shadow: inset 0px 0px 13px 0px rgba(0, 0, 0, 0.411);
+    background-image: url(imagem/background002.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section > p {
+    font-family: var(--fonte3);
+    font-size: 1em;
+}
+
+/*Fim MAIN */
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    color: white;
+    height: 35px;
+    text-align: center;
+    
+}
+
+footer > p {
+    margin: 0;
+    padding-top: 0.7%;
+    font-family: var(--fonte1);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: white;
+}
+
+/*Fim FOOTER */
