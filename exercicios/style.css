@@ -1,80 +1,139 @@
-*{
+@charset "UTF-8";
+
+* {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
     background-color: rgb(131, 189, 255);
 }
 
+article.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
 header {
     width: 50%;
     background-color: white;
     text-align: center;
-    margin: 10px auto;
+    margin: 10px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.400);
 }
 
-section {
-    background-color: white;
-    margin: 10px;
-    padding: 5px;
+article.ex-container {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    gap: 1vw;
+    width: 90vw;
+    padding: 1vw;
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.400);
+
+
 }
 
-section img{
-    width: 100%;
-    height: 375px;
+section.ex-html-css {
+    width: 40%;
+    /* border: 1px solid red; */
 }
 
-article h1 {
-    margin-bottom: 10px;
+.ex-html-css h1 {
+    font-size: 1.2em;
+    margin: 1vw;
 }
 
-article p {
-    text-align: justify;
-    margin: 0px 0px 5px 5px;
+.ex-html-css h2 {
+    font-size: 1em;
+    font-weight: normal;
 }
 
-article a {
+.ex-html-css a {
+    color: blue;
     text-decoration: none;
-    color: rgb(51, 51, 255);
-}
-
-article a:hover {
-    text-decoration: underline;
-    text-shadow: 0px 0px 2px rgb(0, 0, 0);
-}
-
-.html-list{
+    transition: color 0.3s;
     position: relative;
-    width: 97.5%;
-    height: 400px;
+    /* Adicione position: relative para que o pseudo-elemento fique posicionado em relação a este elemento */
 
-    /*background-image: url(imagem/target001.png);*/
-    background-size: 100% 100%;
 }
 
-.list {
+.ex-html-css a:hover {
+    color: #3498db;
+    /* Azul suave */
+}
+
+.ex-html-css a::before {
+    content: "";
     position: absolute;
-    top: 7%;
+    width: 100%;
+    height: 2px;
+    /* Altura da linha de sublinhado */
+    bottom: -1px;
+    /* Posiciona o pseudo-elemento abaixo do link */
+    background-color: #3498db;
+    opacity: 0;
+    /* Começa invisível */
+    transition: opacity 0.3s, transform 0.3s;
+    /* Transição suave para opacidade e efeito de escala */
+    transform: scaleX(0);
+    /* Começa sem largura (invisível) */
 }
 
-.html-img{
-    position: absolute;
-    width: 50%;
-    height: 380px;
-    left: 40%;
-    top: -0.5%;
-
-    /*background-image: url(imagem/target001.png);*/
-    background-size: 100% 100%;
+.ex-html-css a:hover::before {
+    opacity: 1;
+    /* Torna o sublinhado visível */
+    transform: scaleX(1);
+    /* Escala para mostrar o sublinhado */
 }
 
-.css-img{
+.ex-html-css a:active {
+    color: #2ecc71;
+}
+
+/* .ex-html-css .varios-ex:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
+
+.ex-html-css .varios-ex p {
+    margin-left: 10px;
+} */
+
+section.iframe {
     width: 60%;
-    min-height: 451px;
+    border: 1px solid rgba(0, 0, 0, 0.250);
+    border-radius: 5px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        width: 90%;
+    }
+
+    article.ex-container {
+        flex-wrap: wrap;
+    }
+
+    section.ex-html-css,
+    section.iframe {
+        width: 100%;
+    }
+
+    section.iframe {
+        height: 100vh;
+    }
 }

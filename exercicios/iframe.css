@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 99vw;
+  height: 100vh;
+  padding: 1vw;
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Largura da barra de rolagem */
+  height: 5px;
+  /* altura da barra de rolagem */
+}
+
+/* Estilizando o polegar (a parte que você arrasta) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Cor do polegar */
+  border-radius: 5px;
+  /* Borda arredondada */
+}
+
+/* Estilizando a pista (fundo) da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+  /* Cor da pista */
+}

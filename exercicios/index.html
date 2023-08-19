@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Exercícios de HTML5 e CSS3</title>
-</head>
-<body>
-    <header>
-        <h1>Curso de HTML5 e CSS3 Curso em Video</h1>
-    </header>
-    <section class="html-list">
-                <article class="list">
-                    <h1>Exercícios de HTML5</h1>
-                    <!-- HTML5 Puro-->
-                    <p onmouseenter="enterex('ex001')" onmouseleave="leaveex()"><a href="ex001/index.html" >Exercício 001:</a>Paragrafo e H1</p>
-                    <p onmouseenter="enterex('ex002')" onmouseleave="leaveex()"><a href="ex002/index.html" >Exercício 002</a>: Parágrafos e quebras de linhas</p>
-                    <p onmouseenter="enterex('ex003')" onmouseleave="leaveex()"><a href="ex003/index.html" >Exercício 003</a>: Testando carga de imagens</p>
-                    <p onmouseenter="enterex('ex004')" onmouseleave="leaveex()"><a href="ex004/index.html" >Exercício 004</a>: Favicon</p>
-                    <p onmouseenter="enterex(0)" onmouseleave="leaveex()"><a href="#" >Ex005</a></p>
-                    <p onmouseenter="enterex('ex006')" onmouseleave="leaveex()"><a href="ex006/index.html" >Exercício 006</a>: Hierarquia de Títulos</p>
-                    <p onmouseenter="enterex(`ex007A`)" onmouseleave="leaveex()"><a href="ex007/html4.html" >Exercício 007A</a>: HTML4</p>
-                    <p onmouseenter="enterex(`ex007B`)" onmouseleave="leaveex()"><a href="ex007/html5.html" >Exercício 007B</a>: HTML5 Exemplo de semantica</p>
-                    <p onmouseenter="enterex(`ex008A`)" onmouseleave="leaveex()"><a href="ex008/index.html" >Exercício 008A</a>: Formatação de textos</p>
-                    <p onmouseenter="enterex(`ex008B`)" onmouseleave="leaveex()"><a href="ex008b/index.html" >Exercício 008B</a>: Outras formatações</p>
-                    <p onmouseenter="enterex('ex009')" onmouseleave="leaveex()"><a href="ex009/index.html" >Exercício 009</a>: Trabalhando com Listas</p>
-                    <p onmouseenter="enterex('ex010')" onmouseleave="leaveex()"><a href="ex010/index.html" >Exercício 010</a>: Link's</p>
-                    <p onmouseenter="enterex('ex011')" onmouseleave="leaveex()"><a href="ex011/index.html" >Exercício 011</a>: Imagem dinamica e Áudio</p>
-                    <p onmouseenter="enterex('ex012')" onmouseleave="leaveex()"><a href="ex012/index.html" >Exercício 012</a>: Videos Locais e Externos</p>
-                </article>
-                <section class="html-img" id="htmlimg">
-                    <img src="imagem/exemplo.png">
-                </section>
-    </section>
 
-    <!--
-    <article class="html-list">
-            <h1>Exercícios de HTML5 + CSS3</h1>
-            <p><a href="ex013/index.html">Exercício 013</a>: CSS Inline</p>
-            <p><a href="ex014/index.html">Exercício 014</a>: CSS Interno</p>
-            <p><a href="ex015/index.html">Exercício 015</a>: CSS Externo</p>
-            <p><a href="ex016/cor01.html">Exercício 016A</a>: Cor 1</p>
-            <p><a href="ex016/cor02.html">Exercício 016B</a>: Cor 2</p>
-            <p><a href="ex016/cor03.html">Exercício 016C</a>: Cor 3</p>
-            <p><a href="ex017/fonte01.html">Exercício 017A</a>: Trabalhando com Fontes</p>
-            <p><a href="ex017/fonte02.html">Exercício 017B</a>: Tipos de Alinhamento</p>
-            <p><a href="ex018/fonte01.html">Exercício 018A</a>: Fontes com Google Fontes</p>
-            <p><a href="ex018/fonte02.html">Exercício 018B</a>: Fontes Externas</p>
-            <p><a href="ex019/seletor01.html">Exercício 019</a>: Seletores Id and Class</p>
-            <p><a href="ex020/hover.html">Exercício 020A</a>: Exemplo de Hover</p>
-            <p><a href="ex020/links.html">Exercício 020B</a>: Link com Hover</p>
-            <p><a href="ex020/pseudoclass.html">Exercício 020C</a>: Pseudoclass - Hover, After, Before</p>
-            <p><a href="ex021/caixa01.html">Exercício 021A</a>: Modelo de Caixas - Box-level e Inline-level</p>
-            <p><a href="ex021/caixa02.html">Exercício 021B</a>: Tags de agrupamento</p>
-            <p><a href="ex021/caixa03.html">Exercício 021C</a>: Bordas Personalizadas</p>
-            <p><a href="ex022/fundo001.html">Exercício 022</a>: Imagens como fundo</p>
-</article>
-<article class="css-img" id="htmlimg">
-    <img src="imagem/exemplo.png">
-</article>
--->
-<script src="script.js"></script>
+    <title>Exercícios de HTML5 e CSS3</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <article class="container">
+        <header>
+            <h1>Curso de HTML5 e CSS3 Curso em Video</h1>
+        </header>
+        <article class="ex-container">
+            <section class="ex-html-css">
+                <h1>Exercícios de HTML5</h1>
+                <!-- HTML5 Puro-->
+                <p><a href="ex001/index.html" target="tela">Exercício 001:</a>Paragrafo e H1</p>
+                <p><a href="ex002/index.html" target="tela">Exercício 002</a>: Parágrafos e quebras de linhas</p>
+                <p><a href="ex003/index.html" target="tela">Exercício 003</a>: Testando carga de imagens</p>
+                <p><a href="ex004/index.html" target="tela">Exercício 004</a>: Favicon</p>
+                <p><a href="#">Ex005</a></p>
+                <p><a href="ex006/index.html" target="tela">Exercício 006</a>: Hierarquia de Títulos</p>
+                <p><a href="ex007/html4.html" target="tela">Exercício 007A</a>: HTML4</p>
+                <p><a href="ex007/html5.html" target="tela">Exercício 007B</a>: HTML5 Exemplo de semantica</p>
+                <p><a href="ex008/index.html" target="tela">Exercício 008A</a>: Formatação de textos</p>
+                <p><a href="ex008b/index.html" target="tela">Exercício 008B</a>: Outras formatações</p>
+                <p><a href="ex009/index.html" target="tela">Exercício 009</a>: Trabalhando com Listas</p>
+                <p><a href="ex010/index.html" target="tela">Exercício 010</a>: Link's</p>
+                <p><a href="ex011/index.html" target="tela">Exercício 011</a>: Imagem dinamica e Áudio</p>
+                <p><a href="ex012/index.html" target="tela">Exercício 012</a>: Videos Locais e Externos</p>
+                <h1>Exercícios de HTML5 + CSS3</h1>
+                <p><a href="ex013/index.html" target="tela">Exercício 013</a>: CSS Inline</p>
+                <p><a href="ex014/index.html" target="tela">Exercício 014</a>: CSS Interno</p>
+                <p><a href="ex015/index.html" target="tela">Exercício 015</a>: CSS Externo</p>
+                <p><a href="ex016/cor01.html" target="tela">Exercício 016A</a>: Cor 1</p>
+                <p><a href="ex016/cor02.html" target="tela">Exercício 016B</a>: Cor 2</p>
+                <p><a href="ex016/cor03.html" target="tela">Exercício 016C</a>: Cor 3</p>
+                <p><a href="ex017/fonte01.html" target="tela">Exercício 017A</a>: Trabalhando com Fontes</p>
+                <p><a href="ex017/fonte02.html" target="tela">Exercício 017B</a>: Tipos de Alinhamento</p>
+                <p><a href="ex018/fonte01.html" target="tela">Exercício 018A</a>: Fontes com Google Fontes</p>
+                <p><a href="ex018/fonte02.html" target="tela">Exercício 018B</a>: Fontes Externas</p>
+                <p><a href="ex019/seletor01.html" target="tela">Exercício 019</a>: Seletores Id and Class</p>
+                <p><a href="ex020/hover.html" target="tela">Exercício 020A</a>: Exemplo de Hover</p>
+                <p><a href="ex020/links.html" target="tela">Exercício 020B</a>: Link com Hover</p>
+                <p><a href="ex020/pseudoclass.html" target="tela">Exercício 020C</a>: Pseudoclass - Hover, After,
+                    Before
+                </p>
+                <p><a href="ex021/caixa01.html" target="tela">Exercício 021A</a>: Modelo de Caixas - Box-level e
+                    Inline-level</p>
+                <p><a href="ex021/caixa02.html" target="tela">Exercício 021B</a>: Tags de agrupamento</p>
+                <p><a href="ex021/caixa03.html" target="tela">Exercício 021C</a>: Bordas Personalizadas</p>
+                <p><a href="ex022/fundo001.html" target="tela">Exercício 022A</a>: Imagens como fundo</p>
+                <p><a href="ex022/fundo002.html" target="tela">Exercício 022B</a>: Imagens como fundo</p>
+                <p><a href="ex022/fundo003.html" target="tela">Exercício 022C</a>: Imagens como fundo</p>
+                <p><a href="ex022/fundo004.html" target="tela">Exercício 022D</a>: Imagens como fundo</p>
+                <p><a href="ex022/fundo005.html" target="tela">Exercício 022E</a>: Imagens como fundo</p>
+                <p><a href="ex022/fundo006.html" target="tela">Exercício 022F</a>: Imagens como fundo</p>
+                <p><a href="ex022/fundo007.html" target="tela">Exercício 022G</a>: Contralizar Background</p>
+            </section>
+            <section class="iframe">
+                <iframe src="ex001/index.html" frameborder="0" name="tela"></iframe>
+            </section>
+        </article>
+    </article>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
