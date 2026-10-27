@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurados Teens — Playlists do Culto</title>
+    
+    <!-- Meta tags para compartilhamento em redes sociais -->
+    <meta name="description" content="Acompanhe e louve com as playlists oficiais do culto Restaurados Teens no Spotify e YouTube Music.">
+    <meta property="og:title" content="Restaurados Teens — Playlists do Culto">
+    <meta property="og:description" content="Cria em mim, ó Deus, um coração puro e renova dentro de mim um espírito inabalável. (Salmos 51:10)">
+    <meta property="og:image" content="image_d44ddc.jpg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        teen: {
+                            navy: '#050c1e',
+                            blue: '#0d1b3e',
+                            glow: '#1e3a8a',
+                            orange: '#ff6b00',
+                            amber: '#f59e0b',
+                            gold: '#fbbf24',
+                        }
+                    },
+                    boxShadow: {
+                        'glow-orange': '0 0 35px -5px rgba(255, 107, 0, 0.4)',
+                        'glow-blue': '0 0 50px -10px rgba(30, 58, 138, 0.6)',
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos e Animações Especiais */
+        body {
+            background-color: #030712;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ff8c00 0%, #f59e0b 50%, #ffd700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-mesh {
+            background-image: 
+                radial-gradient(at 10% 10%, rgba(255, 107, 0, 0.18) 0px, transparent 50%),
+                radial-gradient(at 90% 20%, rgba(14, 165, 233, 0.2) 0px, transparent 50%),
+                radial-gradient(at 50% 80%, rgba(30, 58, 138, 0.35) 0px, transparent 50%),
+                radial-gradient(at 80% 90%, rgba(245, 158, 11, 0.15) 0px, transparent 50%);
+        }
+
+        .glass-panel {
+            background: rgba(13, 27, 62, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        /* Suporte para Iframe Responsivo do YouTube */
+        .responsive-iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col justify-between selection:bg-teen-orange selection:text-white">
+
+    <!-- Efeito de Luzes em Segundo Plano -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 pointer-events-none z-0">
+        <div class="absolute top-10 left-1/4 w-72 h-72 bg-teen-orange/20 rounded-full blur-[120px] pulse-slow"></div>
+        <div class="absolute top-20 right-1/4 w-80 h-80 bg-blue-600/20 rounded-full blur-[140px] pulse-slow" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="relative z-10">
+
+        <!-- Barra Superior com Ícone e Ações Rápidas -->
+        <header class="w-full border-b border-white/10 glass-panel sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-teen-orange to-teen-amber flex items-center justify-center text-white shadow-glow-orange font-black text-sm">
+                        <i class="fas fa-cross text-lg"></i>
+                    </div>
+                    <span class="font-heading font-black tracking-wider text-white text-lg sm:text-xl">
+                        RESTAURADOS <span class="text-teen-orange">TEENS</span>
+                    </span>
+                </div>
+
+                <!-- Botão de Compartilhar no Header -->
+                <button onclick="shareWhatsApp()" class="inline-flex items-center gap-2 bg-emerald-600/90 hover:bg-emerald-500 text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 shadow-lg hover:shadow-emerald-500/20 hover:scale-105">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">Compartilhar</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section com Logo e Versículo -->
+        <section class="max-w-4xl mx-auto px-4 pt-10 pb-8 text-center">
+            
+            <!-- Logo do Grupo com Efeito de Brilho -->
+            <div class="relative inline-block mb-8 group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-teen-orange via-teen-amber to-blue-500 rounded-2xl blur-lg opacity-70 group-hover:opacity-100 transition duration-500 group-hover:duration-200"></div>
+                
+                <!--<img src="https://lh3.googleusercontent.com/pw/AP1GczP_u5On5yTkiMwzVmRn9K2-RstrZLK-21fghohdRAipZpmdDbezclrnw6elMG4VBLT-aSD0W7VA-6W0hXYwjqlZlG0MQRoSpbB9SkqOt4RvskxebjMDFMTHAt6lJYz8fcBfgF9rQYxo0BeGFIHsU_q5sA=w640-h640-s-no-gm" alt="Logo Restaurados Teens" class="relative w-48 sm:w-64 h-auto rounded-2xl shadow-2xl border border-white/20 object-cover mx-auto transform transition duration-300 group-hover:scale-[1.02]">-->
+            </div>
+
+            <!-- Título Principal -->
+            <h1 class="font-heading text-4xl sm:text-6xl font-black uppercase tracking-tight mb-4">
+                Playlists do <span class="gradient-text">Culto</span>
+            </h1>
+
+            <!-- Subtítulo -->
+            <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto font-medium mb-8">
+                Prepare o seu coração e aprenda os louvores que cantaremos juntos na nossa reunião!
+            </p>
+
+            <!-- Versículo em Destaque (Salmos 51:10) -->
+            <div class="relative max-w-2xl mx-auto glass-panel p-6 sm:p-8 rounded-2xl border-l-4 border-l-teen-orange text-left shadow-2xl overflow-hidden">
+                <div class="absolute top-2 right-4 text-white/5 text-7xl font-serif pointer-events-none">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="p-3 bg-teen-orange/20 text-teen-amber rounded-xl shrink-0 hidden sm:block">
+                        <i class="fas fa-dove text-2xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-lg sm:text-xl font-medium italic text-slate-100 leading-relaxed mb-3">
+                            "Cria em mim, ó Deus, um coração puro e renova dentro de mim um espírito inabalável."
+                        </p>
+                        <div class="flex items-center gap-2 font-heading font-bold text-teen-gold text-sm tracking-widest">
+                            <i class="fas fa-bible"></i>
+                            <span>SALMOS 51:10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Seção Principal de Playlists -->
+        <section class="max-w-6xl mx-auto px-4 py-8">
+            
+            <!-- Seletor / Filtro de Visualização -->
+            <div class="flex items-center justify-center gap-2 mb-10 bg-slate-900/80 p-1.5 rounded-full border border-white/10 max-w-md mx-auto backdrop-blur-md">
+                <button onclick="switchTab('all')" id="tab-all" class="flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 bg-teen-orange text-white shadow-lg">
+                    <i class="fas fa-border-all mr-1.5"></i> Todas
+                </button>
+                <button onclick="switchTab('spotify')" id="tab-spotify" class="flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all duration-200">
+                    <i class="fab fa-spotify text-emerald-400 mr-1.5"></i> Spotify
+                </button>
+                <button onclick="switchTab('youtube')" id="tab-youtube" class="flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all duration-200">
+                    <i class="fab fa-youtube text-red-500 mr-1.5"></i> YouTube
+                </button>
+            </div>
+
+            <!-- Grid com as duas opções -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+                <!-- CARD SPOTIFY -->
+                <div id="card-spotify" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-emerald-500/40 transition-all duration-300 shadow-2xl">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl flex items-center justify-center text-emerald-400 shadow-inner">
+                                <i class="fab fa-spotify text-2xl"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-heading font-bold text-xl text-white">Spotify</h2>
+                                <p class="text-xs text-slate-400">Ouça a playlist completa no app</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-500/20">
+                            Áudio HQ
+                        </span>
+                    </div>
+
+                    <!-- Embed Iframe Spotify Oficial -->
+                    <div class="w-full mb-6 rounded-2xl overflow-hidden shadow-xl bg-black/40 border border-white/5">
+                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2hpUTSI9Y6l5F5y5e9E4zi?utm_source=generator&si=d35e93c133734005" width="100%" height="382" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+
+                    <!-- Botão Direto Spotify -->
+                    <a href="https://open.spotify.com/playlist/2hpUTSI9Y6l5F5y5e9E4zi" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-[#1DB954] hover:bg-[#1ed760] text-black font-bold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-[#1DB954]/25">
+                        <i class="fab fa-spotify text-xl"></i>
+                        <span>Abrir direto no App do Spotify</span>
+                    </a>
+                </div>
+
+                <!-- CARD YOUTUBE MUSIC -->
+                <div id="card-youtube" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-red-500/40 transition-all duration-300 shadow-2xl">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-red-500/10 border border-red-500/30 rounded-2xl flex items-center justify-center text-red-500 shadow-inner">
+                                <i class="fab fa-youtube text-2xl"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-heading font-bold text-xl text-white">YouTube Music</h2>
+                                <p class="text-xs text-slate-400">Assista aos clipes e vídeos</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full border border-red-500/20">
+                            Vídeo & Áudio
+                        </span>
+                    </div>
+
+                    <!-- Embed Iframe Playlist YouTube -->
+                    <div class="w-full mb-6 rounded-2xl overflow-hidden shadow-xl bg-black/40 border border-white/5">
+                        <div class="responsive-iframe-container">
+                            <iframe src="https://www.youtube.com/embed/videoseries?list=PLV2lyh3TrUMU" title="Playlist Restaurados Teens YouTube" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Botão Direto YouTube Music -->
+                    <a href="https://music.youtube.com/playlist?list=PLV2lyh3TrUMU&si=o2wkMUh1zKJL1AP-" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-red-600/30">
+                        <i class="fab fa-youtube text-xl"></i>
+                        <span>Abrir no YouTube Music</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção de Ações / Compartilhamento -->
+        <section class="max-w-3xl mx-auto px-4 py-10 text-center">
+            <div class="glass-panel rounded-3xl p-8 border border-teen-orange/30 shadow-glow-orange relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-teen-orange/10 rounded-full blur-2xl"></div>
+                
+                <i class="fas fa-paper-plane text-4xl text-teen-amber mb-4 block"></i>
+                <h3 class="font-heading text-2xl font-black text-white mb-2">Chame a galera pro culto!</h3>
+                <p class="text-slate-300 text-sm mb-6 max-w-md mx-auto">
+                    Envie o link desta página no grupo dos jovens para que todos já fiquem por dentro de todas as músicas.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="shareWhatsApp()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold px-6 py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Enviar no Grupo (WhatsApp)</span>
+                    </button>
+                    
+                    <button onclick="copyLink()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-3.5 rounded-xl border border-white/20 transition-all duration-200">
+                        <i class="fas fa-copy text-teen-amber"></i>
+                        <span id="copy-btn-text">Copiar Link</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="relative z-10 border-t border-white/10 bg-slate-950/80 py-10 mt-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <i class="fas fa-heart text-teen-orange"></i>
+                <span class="font-heading font-extrabold text-white tracking-widest text-sm">RESTAURADOS TEENS</span>
+            </div>
+            
+            <p class="text-slate-400 text-xs sm:text-sm mb-4 leading-relaxed max-w-lg mx-auto">
+                "Ninguém o despreze por ser jovem, mas seja um exemplo para os crentes na palavra, no procedimento, no amor, na fé e na pureza." — 1 Timóteo 4:12
+            </p>
+
+            <p class="text-slate-500 text-xs">
+                &copy; 2026 Restaurados Teens — Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Notificação Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-emerald-500 text-slate-950 px-5 py-3 rounded-xl shadow-2xl font-bold text-sm flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50">
+        <i class="fas fa-check-circle text-lg"></i>
+        <span id="toast-message">Link copiado com sucesso!</span>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // Função para alternar entre as abas das plataformas
+        function switchTab(platform) {
+            const cardSpotify = document.getElementById('card-spotify');
+            const cardYoutube = document.getElementById('card-youtube');
+            const btnAll = document.getElementById('tab-all');
+            const btnSpotify = document.getElementById('tab-spotify');
+            const btnYoutube = document.getElementById('tab-youtube');
+
+            // Resetar estilos dos botões
+            [btnAll, btnSpotify, btnYoutube].forEach(btn => {
+                btn.className = "flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all duration-200";
+            });
+
+            if (platform === 'all') {
+                cardSpotify.classList.remove('hidden');
+                cardYoutube.classList.remove('hidden');
+                btnAll.className = "flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 bg-teen-orange text-white shadow-lg";
+            } else if (platform === 'spotify') {
+                cardSpotify.classList.remove('hidden');
+                cardYoutube.classList.add('hidden');
+                btnSpotify.className = "flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 bg-emerald-500 text-slate-950 shadow-lg";
+            } else if (platform === 'youtube') {
+                cardSpotify.classList.add('hidden');
+                cardYoutube.classList.remove('hidden');
+                btnYoutube.className = "flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 bg-red-600 text-white shadow-lg";
+            }
+        }
+
+        // Função para compartilhar no WhatsApp
+        function shareWhatsApp() {
+            const pageUrl = window.location.href;
+            const message = `🔥 *RESTAURADOS TEENS — PLAYLIST DO CULTO* 🔥\n\nFala galera! Já estão disponíveis as playlists do nosso próximo culto no Spotify e YouTube Music! 🎵🙏\n\nAcesse e aprenda os louvores:\n${pageUrl}`;
+            
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Função para copiar o link da página
+        function copyLink() {
+            const url = window.location.href;
+            
+            // Método legível/compatível de cópia
+            const tempInput = document.createElement('input');
+            tempInput.value = url;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast("Link copiado para a área de transferência!");
+        }
+
+        // Exibir notificação Toast
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            toastMessage.textContent = msg;
+            
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
