@@ -52,6 +52,27 @@
     </script>
 
     <style>
+        /* Fonts */
+        @font-face {
+            font-family: 'Undisclose';
+            src: url('./assets/fonts/Undisclose.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Scrapyard Script';
+            src: url('./assets/fonts/ScrapyardScript.woff2') format('woff2');
+            font-display: swap;
+        }
+        .font-undisclose {
+            font-family: 'Undisclose', sans-serif;
+        }
+
+        .font-scrapyard {
+            font-family: 'Scrapyard Script', cursive;
+        }
+
+
         /* Estilos e Animações Especiais */
         body {
             background-color: #030712;
@@ -64,6 +85,24 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Header Restaurados Teens */
+        .header-restaurados {
+            background: linear-gradient(180deg, #fcf3e0 10%, #f1bd5c 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 2px 5px rgba(255, 166, 35, 0.2));
+        }
+
+        .header-teens {
+            background: linear-gradient(135deg, #ff6b00, #ff9a1f 55%, #ffd166);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: drop-shadow(0 2px 5px rgba(255, 107, 0, 0.25));
+        }
+
 
         .bg-mesh {
             background-image: 
@@ -128,8 +167,9 @@
                     <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-teen-orange to-teen-amber flex items-center justify-center text-white shadow-glow-orange font-black text-sm">
                         <i class="fas fa-cross text-lg"></i>
                     </div>
-                    <span class="font-heading font-black tracking-wider text-white text-lg sm:text-xl">
-                        RESTAURADOS <span class="text-teen-orange">TEENS</span>
+                    <span class="font-heading font-black tracking-wider text-lg sm:text-xl">
+                            <span class="header-restaurados">RESTAURADOS</span>
+                        <span class="header-teens"> TEENS</span>
                     </span>
                 </div>
 
@@ -143,13 +183,6 @@
 
         <!-- Hero Section com Logo e Versículo -->
         <section class="max-w-4xl mx-auto px-4 pt-10 pb-8 text-center">
-            
-            <!-- Logo do Grupo com Efeito de Brilho -->
-            <div class="relative inline-block mb-8 group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-teen-orange via-teen-amber to-blue-500 rounded-2xl blur-lg opacity-70 group-hover:opacity-100 transition duration-500 group-hover:duration-200"></div>
-                
-                <!--<img src="https://lh3.googleusercontent.com/pw/AP1GczP_u5On5yTkiMwzVmRn9K2-RstrZLK-21fghohdRAipZpmdDbezclrnw6elMG4VBLT-aSD0W7VA-6W0hXYwjqlZlG0MQRoSpbB9SkqOt4RvskxebjMDFMTHAt6lJYz8fcBfgF9rQYxo0BeGFIHsU_q5sA=w640-h640-s-no-gm" alt="Logo Restaurados Teens" class="relative w-48 sm:w-64 h-auto rounded-2xl shadow-2xl border border-white/20 object-cover mx-auto transform transition duration-300 group-hover:scale-[1.02]">-->
-            </div>
 
             <!-- Título Principal -->
             <h1 class="font-heading text-4xl sm:text-6xl font-black uppercase tracking-tight mb-4">
