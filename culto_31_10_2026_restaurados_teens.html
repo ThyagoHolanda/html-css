@@ -351,7 +351,7 @@
         // Função para compartilhar no WhatsApp
         function shareWhatsApp() {
             const pageUrl = window.location.href;
-            const message = `🔥 *RESTAURADOS TEENS — PLAYLIST DO CULTO* 🔥\n\nFala galera! Já estão disponíveis as playlists do nosso próximo culto no Spotify e YouTube Music! 🎵🙏\n\nAcesse e aprenda os louvores:\n${pageUrl}`;
+            const message = `🔥 *RESTAURADOS TEENS — PLAYLIST DO CULTO* 🔥\n\nFala galera! Já estão disponíveis as playlists do nosso próximo culto no Spotify e YouTube Music! 🎵🙏\n\nNosso culto acontecerá no dia 31/10 às 18:30\nIgreja Cristã Familia Restaurada - Av. Treze de Maio, 132a - Fátima / Joaquim Távora\n\nAcesse e aprenda os louvores:\n${pageUrl}`;
             
             const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
