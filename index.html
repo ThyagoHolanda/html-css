@@ -65,27 +65,6 @@
     </script>
 
     <style>
-        /* Fonts */
-        @font-face {
-            font-family: 'Undisclose';
-            src: url('./assets/fonts/Undisclose.woff2') format('woff2');
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'Scrapyard Script';
-            src: url('./assets/fonts/ScrapyardScript.woff2') format('woff2');
-            font-display: swap;
-        }
-        .font-undisclose {
-            font-family: 'Undisclose', sans-serif;
-        }
-
-        .font-scrapyard {
-            font-family: 'Scrapyard Script', cursive;
-        }
-
-
         /* Estilos e Animações Especiais */
         body {
             background-color: #030712;
@@ -141,25 +120,6 @@
         .pulse-slow {
             animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-
-        /* Suporte para Iframe Responsivo do YouTube */
-        .responsive-iframe-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* Aspect Ratio 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-
-        .responsive-iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
     </style>
 </head>
 <body class="bg-mesh min-h-screen flex flex-col justify-between selection:bg-teen-orange selection:text-white">
@@ -207,8 +167,8 @@
                 Prepare o seu coração e aprenda os louvores que cantaremos juntos!
             </p>
 
-            <!-- Versículo em Destaque (Salmos 51:10) -->
-            <div class="relative max-w-2xl mx-auto glass-panel p-6 sm:p-8 rounded-2xl border-l-4 border-l-teen-orange text-left shadow-2xl overflow-hidden">
+            <!-- Versículo em Destaque (1 Samuel 3:10) -->
+            <div class="relative max-w-3xl mx-auto glass-panel p-6 sm:p-8 rounded-2xl border-l-4 border-l-teen-orange text-left shadow-2xl overflow-hidden">
                 <div class="absolute top-2 right-4 text-white/5 text-7xl font-serif pointer-events-none">
                     <i class="fas fa-quote-right"></i>
                 </div>
@@ -230,77 +190,38 @@
 
         </section>
 
-        <!-- Seção Principal de Playlists -->
-        <section class="max-w-6xl mx-auto px-4 py-8">
-            
-            <!-- Seletor / Filtro de Visualização -->
-            <div class="flex items-center justify-center gap-2 mb-10 bg-slate-900/80 p-1.5 rounded-full border border-white/10 max-w-md mx-auto backdrop-blur-md">
-                <button onclick="switchTab('all')" id="tab-all" class="flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 bg-teen-orange text-white shadow-lg">
-                    <i class="fas fa-border-all mr-1.5"></i> Todas
-                </button>
-                <button onclick="switchTab('spotify')" id="tab-spotify" class="flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all duration-200">
-                    <i class="fab fa-spotify text-emerald-400 mr-1.5"></i> Spotify
-                </button>
-                <button onclick="switchTab('youtube')" id="tab-youtube" class="flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all duration-200">
-                    <i class="fab fa-youtube text-red-500 mr-1.5"></i> YouTube
-                </button>
-            </div>
+        <!-- Seção Principal da Playlist -->
+        <section class="max-w-2xl mx-auto px-4 py-8">
 
-            <!-- Grid com as duas opções -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-
-                <!-- CARD SPOTIFY -->
-                <div id="card-spotify" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-emerald-500/40 transition-all duration-300 shadow-2xl">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl flex items-center justify-center text-emerald-400 shadow-inner">
-                                <i class="fab fa-spotify text-2xl"></i>
-                            </div>
-                            <div>
-                                <h2 class="font-heading font-bold text-xl text-white">Spotify</h2>
-                                <p class="text-xs text-slate-400">Ouça a playlist completa no app</p>
-                            </div>
+            <!-- CARD SPOTIFY (ocupa toda a largura) -->
+            <div id="card-spotify" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-emerald-500/40 transition-all duration-300 shadow-2xl">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl flex items-center justify-center text-emerald-400 shadow-inner">
+                            <i class="fab fa-spotify text-2xl"></i>
                         </div>
-                        <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-500/20">
-                            Áudio HQ
-                        </span>
+                        <div>
+                            <h2 class="font-heading font-bold text-xl text-white">Spotify</h2>
+                            <p class="text-xs text-slate-400">Ouça a playlist completa no app</p>
+                        </div>
                     </div>
+                    <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-500/20">
+                        Áudio HQ
+                    </span>
+                </div>
 
-                    <!-- Embed Iframe Spotify Oficial -->
-                    <div class="w-full mb-6 rounded-2xl overflow-hidden shadow-xl bg-black/40 border border-white/5">
-                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2hpUTSI9Y6l5F5y5e9E4zi?utm_source=generator&si=d35e93c133734005" width="100%" height="382" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
+                <!-- Embed Iframe Spotify Oficial -->
+                <div class="w-full mb-6 rounded-2xl overflow-hidden shadow-xl bg-black/40 border border-white/5">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2hpUTSI9Y6l5F5y5e9E4zi?utm_source=generator&si=d35e93c133734005" width="100%" height="480" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
 
+                <!-- Botões de abertura direta -->
+                <div class="flex flex-col gap-3">
                     <!-- Botão Direto Spotify -->
                     <a href="https://open.spotify.com/playlist/2hpUTSI9Y6l5F5y5e9E4zi" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-[#1DB954] hover:bg-[#1ed760] text-black font-bold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-[#1DB954]/25">
                         <i class="fab fa-spotify text-xl"></i>
                         <span>Abrir direto no App do Spotify</span>
                     </a>
-                </div>
-
-                <!-- CARD YOUTUBE MUSIC -->
-                <div id="card-youtube" class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 hover:border-red-500/40 transition-all duration-300 shadow-2xl">
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 bg-red-500/10 border border-red-500/30 rounded-2xl flex items-center justify-center text-red-500 shadow-inner">
-                                <i class="fab fa-youtube text-2xl"></i>
-                            </div>
-                            <div>
-                                <h2 class="font-heading font-bold text-xl text-white">YouTube Music</h2>
-                                <p class="text-xs text-slate-400">Assista aos clipes e vídeos</p>
-                            </div>
-                        </div>
-                        <span class="px-3 py-1 bg-red-500/10 text-red-400 text-xs font-semibold rounded-full border border-red-500/20">
-                            Vídeo & Áudio
-                        </span>
-                    </div>
-
-                    <!-- Embed Iframe Playlist YouTube -->
-                    <div class="w-full mb-6 rounded-2xl overflow-hidden shadow-xl bg-black/40 border border-white/5">
-                        <div class="responsive-iframe-container">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=-mJl3ufyKxGfczGv&amp;list=PLV2lyh3TrUMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div>
 
                     <!-- Botão Direto YouTube Music -->
                     <a href="https://music.youtube.com/playlist?list=PLV2lyh3TrUMU&si=o2wkMUh1zKJL1AP-" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-red-600/30">
@@ -308,8 +229,8 @@
                         <span>Abrir no YouTube Music</span>
                     </a>
                 </div>
-
             </div>
+
         </section>
 
         <!-- Seção de Ações / Compartilhamento -->
@@ -366,34 +287,6 @@
 
     <!-- Scripts JavaScript -->
     <script>
-        // Função para alternar entre as abas das plataformas
-        function switchTab(platform) {
-            const cardSpotify = document.getElementById('card-spotify');
-            const cardYoutube = document.getElementById('card-youtube');
-            const btnAll = document.getElementById('tab-all');
-            const btnSpotify = document.getElementById('tab-spotify');
-            const btnYoutube = document.getElementById('tab-youtube');
-
-            // Resetar estilos dos botões
-            [btnAll, btnSpotify, btnYoutube].forEach(btn => {
-                btn.className = "flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition-all duration-200";
-            });
-
-            if (platform === 'all') {
-                cardSpotify.classList.remove('hidden');
-                cardYoutube.classList.remove('hidden');
-                btnAll.className = "flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 bg-teen-orange text-white shadow-lg";
-            } else if (platform === 'spotify') {
-                cardSpotify.classList.remove('hidden');
-                cardYoutube.classList.add('hidden');
-                btnSpotify.className = "flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 bg-emerald-500 text-slate-950 shadow-lg";
-            } else if (platform === 'youtube') {
-                cardSpotify.classList.add('hidden');
-                cardYoutube.classList.remove('hidden');
-                btnYoutube.className = "flex-1 py-2 px-4 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 bg-red-600 text-white shadow-lg";
-            }
-        }
-
         // Função para compartilhar no WhatsApp
         function shareWhatsApp() {
             const pageUrl = window.location.href;
